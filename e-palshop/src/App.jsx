@@ -5,8 +5,8 @@ import Product from './Page/Product';
 const App = () => {
   return (
     <div>
-      {/* <Home/> */}
-      <Product/>
+      <Home/> 
+      {/* <Product/> */}
     </div>
   )
 }
