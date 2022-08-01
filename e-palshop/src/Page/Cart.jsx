@@ -149,6 +149,8 @@ const PriceAmount = styled.div`
         font-size:24px;
         margin: 10px;
         ${mobile({ margin: "5px 15px" })};
+        ${mobile({ flexDirection: "column" })};
+
 
 
 
@@ -158,6 +160,8 @@ const ProductPrice = styled.div`
         font-size:30px;
         font-weight:400;
         ${mobile({ marginBottom: "20px" })};
+        ${mobile({ flexDirection: "column" })};
+
 
 
     
