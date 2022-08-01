@@ -42,7 +42,7 @@ const Container = styled.div`
   border-radius: 5px;
   border: 1px solid greenyellow;
   object-fit: cover;
-  margin:0px;
+  margin-right:50px;
 `;
 
 
@@ -50,7 +50,7 @@ const Image = styled.img`
   height: 85%;
   
   object-fit: cover;
-  overflow:hidden;
+  //overflow:hidden;
   
   
 `;

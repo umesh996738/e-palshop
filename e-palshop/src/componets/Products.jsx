@@ -3,15 +3,16 @@ import { popularProducts } from "../data";
 import Product from "./Product";
 
 const Container = styled.div`
-    padding: 30px;
+    padding: 20px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     border-radius: 5px;
-    border: 1px solid lightsteelblue;
+    //border: 1px solid lightsteelblue;
     width:100vw;
     height:100vh;
-    margin: 20px;
+    margin-right: 50px;
+    
 `;
 
 const Products = () => {
