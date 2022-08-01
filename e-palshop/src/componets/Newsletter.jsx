@@ -11,7 +11,7 @@ const Container = styled.div`
   flex-direction: column;
   border-radius: 5px;
   border: 1px solid lightcoral;
-  ${mobile({ flexDirection: "column" })};
+  
 
 `;
 const Title = styled.h1`
