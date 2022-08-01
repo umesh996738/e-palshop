@@ -20,6 +20,8 @@ const Wrapper = styled.div`
         border: 1px solid blue;
         border-radius: 5px;
         margin-top: 2px;
+        ${mobile({ padding: "10px" })};
+
         
 
 `;
@@ -55,6 +57,8 @@ const TopButton = styled.button`
 const TopTexts = styled.div`
     display: flex;
     font-size: 18px;
+    ${mobile({ display: "none" })};
+
     
 `;
 const TopText = styled.span`
@@ -68,6 +72,8 @@ const Bottom = styled.div`
     
     display: flex;
     justify-content: space-between;
+    ${mobile({ flexDirection: "column" })};
+
 `;
 const Info = styled.div`
         flex: 3;
@@ -142,7 +148,8 @@ const PriceAmountContainer = styled.div`
 const PriceAmount = styled.div`
         font-size:24px;
         margin: 10px;
-        ${mobile({ flexDirection: "column" })};
+        ${mobile({ margin: "5px 15px" })};
+
 
 
 `;
@@ -150,7 +157,8 @@ const PriceAmount = styled.div`
 const ProductPrice = styled.div`
         font-size:30px;
         font-weight:400;
-        ${mobile({ flexDirection: "column" })};
+        ${mobile({ marginBottom: "20px" })};
+
 
     
 `;
