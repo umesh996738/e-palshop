@@ -26,7 +26,7 @@ const Info = styled.div`
 `;
 
 const Container = styled.div`
-  //flex: 1;
+  flex: 1;
   margin: 5px;
   width: 300px;
   height: 300px;
