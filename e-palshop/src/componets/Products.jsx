@@ -9,6 +9,8 @@ const Container = styled.div`
     justify-content: space-between;
     border-radius: 5px;
     border: 1px solid lightsteelblue;
+    width:100vw;
+    height:100vh;
 `;
 
 const Products = () => {

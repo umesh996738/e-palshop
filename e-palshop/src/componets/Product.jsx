@@ -46,8 +46,10 @@ const Container = styled.div`
 
 const Image = styled.img`
   height: 85%;
-  z-index: 2;
+  //z-index: 2;
   object-fit: cover;
+  overflow:hidden;
+  
 `;
 
 const Icon = styled.div`

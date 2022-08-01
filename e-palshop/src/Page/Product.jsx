@@ -9,7 +9,10 @@ import { Add, Remove } from "@mui/icons-material";
 
 
 
-const Container = styled.div``;
+const Container = styled.div`
+  width: 100vw;
+  height: 100vh;
+`;
 
 const Wrapper = styled.div`
     padding: 50px;
