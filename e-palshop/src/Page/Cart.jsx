@@ -160,7 +160,7 @@ const ProductPrice = styled.div`
         font-size:30px;
         font-weight:400;
         ${mobile({ marginBottom: "20px" })};
-        ${mobile({ flexDirection: "column" })};
+        /* ${mobile({ flexDirection: "column" })}; */
 
 
 

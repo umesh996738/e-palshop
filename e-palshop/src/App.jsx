@@ -9,12 +9,12 @@ import Cart from './Page/Cart';
 const App = () => {
   return (
     <div>
-      {/* <Home/>  */}
+      <Home/> 
       {/* <ProductList/>  */}
       {/* <Product/> */}
      {/* <Register/>  */}
       {/* <SignIn/>  */}
-      <Cart/>
+      {/* <Cart/> */}
     </div>
   )
 }
