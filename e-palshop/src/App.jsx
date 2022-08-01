@@ -4,6 +4,7 @@ import ProductList from './Page/ProductList';
 import Product from './Page/Product';
 import Register from './Page/Register';
 import SignIn from './Page/SignIn';
+import Cart from './Page/Cart';
 
 const App = () => {
   return (
@@ -12,7 +13,8 @@ const App = () => {
       {/* <ProductList/>  */}
       {/* <Product/> */}
      {/* <Register/>  */}
-       <SignIn/> 
+      {/* <SignIn/>  */}
+      <Cart/>
     </div>
   )
 }

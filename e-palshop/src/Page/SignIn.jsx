@@ -1,10 +1,13 @@
 import styled from 'styled-components';
+import { mobile } from "../responsive";
+
 const Container = styled.div`
       width: 100VW;
       height: 100vh;
       display: flex;
       align-items: center;
       justify-content: center;
+
 `;
 
 const Wrapper = styled.div`
@@ -15,6 +18,8 @@ const Wrapper = styled.div`
     display: flex;
     flex-direction: column;
     margin:20px;
+    ${mobile({ width: "75%" })};
+
 
 `;
 
