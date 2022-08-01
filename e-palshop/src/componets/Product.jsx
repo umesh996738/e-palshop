@@ -68,7 +68,7 @@ const Icon = styled.div`
   &:hover {
     background-color: #e9f5f5;
     transform: scale(1.1);
-  };
+  }`;
 
 
 
