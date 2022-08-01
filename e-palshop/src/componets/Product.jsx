@@ -26,11 +26,12 @@ const Info = styled.div`
 `;
 
 const Container = styled.div`
-  flex: 1;
+  //flex: 1;
   margin: 5px;
   width: 300px;
-  height: 350px;
+  height: 300px;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   background-color: #f5fbfd;
@@ -41,14 +42,16 @@ const Container = styled.div`
   border-radius: 5px;
   border: 1px solid greenyellow;
   object-fit: cover;
+  margin:0px;
 `;
 
 
 const Image = styled.img`
   height: 85%;
-  //z-index: 2;
+  
   object-fit: cover;
   overflow:hidden;
+  
   
 `;
 

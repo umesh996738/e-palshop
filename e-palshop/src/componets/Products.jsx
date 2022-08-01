@@ -3,7 +3,7 @@ import { popularProducts } from "../data";
 import Product from "./Product";
 
 const Container = styled.div`
-    padding: 20px;
+    padding: 30px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -11,6 +11,7 @@ const Container = styled.div`
     border: 1px solid lightsteelblue;
     width:100vw;
     height:100vh;
+    margin: 20px;
 `;
 
 const Products = () => {
