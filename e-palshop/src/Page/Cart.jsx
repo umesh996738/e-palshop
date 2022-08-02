@@ -8,6 +8,106 @@ import { mobile } from "../responsive";
 import { Add, Remove } from '@mui/icons-material';
 
 
+const Cart = () => {
+    return (
+        <>
+            <Container>
+                <Header />
+                <Announcement />
+                <Wrapper>
+                    <Title>YOUR BAG</Title>
+                    <Top>
+                        <TopButton >Continous Shopping </TopButton>
+                        <TopTexts>
+                            <TopText>Shopping Bag(2)</TopText>
+                            <TopText> Your WishList(0)</TopText>
+                        </TopTexts>
+                        <TopButton >CheckOut Now</TopButton>
+                    </Top>
+                    <Bottom>
+                        <Info>
+                            <Products>
+                                <ProductDetails>
+                                
+                                    <Image src="https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1614188818-TD1MTHU_SHOE_ANGLE_GLOBAL_MENS_TREE_DASHERS_THUNDER_b01b1013-cd8d-48e7-bed9-52db26515dc4.png?crop=1xw:1.00xh;center,top&resize=480%3A%2A" />
+
+                                    <Details>
+                                        <ProductName><b>Product:</b>Nike Shoes</ProductName>
+                                        <ProductId><b>ID:</b>7876646464646</ProductId>
+                                        <ProductColor color="black" />
+                                        <ProductSize><b>Size:</b> 37.8</ProductSize>
+                                    </Details>
+                                </ProductDetails>
+                                <PriceDetails>
+                                    <PriceAmountContainer>
+                                        <Add />
+                                        <PriceAmount>1</PriceAmount>
+                                        <Remove />
+                                      
+                                    </PriceAmountContainer>
+                                    <ProductPrice>$40</ProductPrice>
+                                </PriceDetails>
+                              
+                            </Products>
+                            <Hr />
+                          
+                            <Products>
+                                <ProductDetails>
+                                
+                                    <Image src="https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1614188818-TD1MTHU_SHOE_ANGLE_GLOBAL_MENS_TREE_DASHERS_THUNDER_b01b1013-cd8d-48e7-bed9-52db26515dc4.png?crop=1xw:1.00xh;center,top&resize=480%3A%2A" />
+
+                                    <Details>
+                                        <ProductName><b>Product:</b>Nike Shoes</ProductName>
+                                        <ProductId><b>ID:</b>7876646464646</ProductId>
+                                        <ProductColor color="black" />
+                                        <ProductSize><b>Size:</b> 37.8</ProductSize>
+                                    </Details>
+                                </ProductDetails>
+                                <PriceDetails>
+                                    <PriceAmountContainer>
+                                        <Add />
+                                        <PriceAmount>1</PriceAmount>
+                                        <Remove />
+                                      
+                                    </PriceAmountContainer>
+                                    <ProductPrice>$40</ProductPrice>
+                                </PriceDetails>
+                              
+                            </Products>
+                        </Info>
+                        <Summary>
+                            <SummaryTitle>Oder Summary </SummaryTitle>
+                            <SummaryItem>
+                                <SummaryItemText>Subtotal</SummaryItemText>
+                                <SummaryItemPrice>$ 80</SummaryItemPrice>
+                            </SummaryItem>
+                            <SummaryItem>
+                                <SummaryItemText>Estimated Shipping</SummaryItemText>
+                                <SummaryItemPrice>$5.90</SummaryItemPrice>
+                            </SummaryItem>
+                            <SummaryItem>
+                                <SummaryItemText>Shipping Discount</SummaryItemText>
+                                <SummaryItemPrice>-$5.90</SummaryItemPrice>
+                            </SummaryItem>
+                            <SummaryItem type="total">
+                                <SummaryItemText >Total</SummaryItemText>
+                                <SummaryItemPrice>$80</SummaryItemPrice>
+                            </SummaryItem>
+                            <Button>CHECKOUT NOW</Button>
+
+                        </Summary>
+                    </Bottom>
+                  
+                  
+                </Wrapper>
+                <Newsletter />
+                <Footer />
+            </Container>
+        </>
+    )
+}
+
+
 const Container = styled.div`
         width :100vw;
         height: 100vh;
@@ -21,9 +121,6 @@ const Wrapper = styled.div`
         border-radius: 5px;
         margin-top: 2px;
         ${mobile({ padding: "10px" })};
-
-        
-
 `;
 const Title = styled.h1`
     display: flex;
@@ -31,15 +128,12 @@ const Title = styled.h1`
     margin-bottom: 10px;
     align-items: center;
     justify-content: center;
-
 `;
 const Top = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    
-    
 `;
 const TopButton = styled.button`
         display: flex;
@@ -58,8 +152,6 @@ const TopTexts = styled.div`
     display: flex;
     font-size: 18px;
     ${mobile({ display: "none" })};
-
-    
 `;
 const TopText = styled.span`
         margin: 0px 10px;
@@ -86,18 +178,12 @@ const Summary = styled.div`
         border-radius:10px;
         height:50vh;
         padding: 20px;
-        
-
-        
 `;
 const Products = styled.div`
     display: flex;
     justify-content: space-between;
       ${mobile({ flexDirection: "column" })};
-
 `;
-
-
 
 const Image = styled.img`
     width: 200px;
@@ -120,8 +206,6 @@ const ProductColor = styled.div`
     height: 20px;
     border-radius: 50px;
     background-color: ${props=>props.color};
-
-
 `;
 
 const ProductSize = styled.div``;
@@ -150,10 +234,6 @@ const PriceAmount = styled.div`
         margin: 10px;
         ${mobile({ margin: "5px 15px" })};
         ${mobile({ flexDirection: "column" })};
-
-
-
-
 `;
 
 const ProductPrice = styled.div`
@@ -161,10 +241,6 @@ const ProductPrice = styled.div`
         font-weight:400;
         ${mobile({ marginBottom: "20px" })};
         /* ${mobile({ flexDirection: "column" })}; */
-
-
-
-    
 `;
 
 const Hr = styled.hr`
@@ -207,108 +283,5 @@ const Button = styled.button`
         color: white;
         cursor: pointer;
 `;
-
-
-
-
-
-const Cart = () => {
-  return (
-      <>
-          <Container>
-              <Header />
-              <Announcement />
-              <Wrapper>
-                  <Title>YOUR BAG</Title>
-                  <Top>
-                      <TopButton >Continous Shopping </TopButton>
-                      <TopTexts>
-                          <TopText>Shopping Bag(2)</TopText>
-                          <TopText> Your WishList(0)</TopText>
-                      </TopTexts>
-                      <TopButton >CheckOut Now</TopButton>
-                  </Top>
-                  <Bottom>
-                      <Info>
-                          <Products>
-                          <ProductDetails>
-                                
-                                <Image src="https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1614188818-TD1MTHU_SHOE_ANGLE_GLOBAL_MENS_TREE_DASHERS_THUNDER_b01b1013-cd8d-48e7-bed9-52db26515dc4.png?crop=1xw:1.00xh;center,top&resize=480%3A%2A" />
-
-                                  <Details>
-                                      <ProductName><b>Product:</b>Nike Shoes</ProductName>
-                                      <ProductId><b>ID:</b>7876646464646</ProductId>
-                                      <ProductColor color = "black" />
-                                      <ProductSize><b>Size:</b> 37.8</ProductSize>
-                                  </Details>
-                              </ProductDetails>
-                              <PriceDetails>
-                                  <PriceAmountContainer>
-                                      <Add />
-                                      <PriceAmount>1</PriceAmount>
-                                      <Remove/>
-                                      
-                                  </PriceAmountContainer>
-                                <ProductPrice>$40</ProductPrice>
-                              </PriceDetails>
-                              
-                          </Products>
-                          <Hr />
-                          
-                          <Products>
-                          <ProductDetails>
-                                
-                                <Image src="https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1614188818-TD1MTHU_SHOE_ANGLE_GLOBAL_MENS_TREE_DASHERS_THUNDER_b01b1013-cd8d-48e7-bed9-52db26515dc4.png?crop=1xw:1.00xh;center,top&resize=480%3A%2A" />
-
-                                  <Details>
-                                      <ProductName><b>Product:</b>Nike Shoes</ProductName>
-                                      <ProductId><b>ID:</b>7876646464646</ProductId>
-                                      <ProductColor color = "black" />
-                                      <ProductSize><b>Size:</b> 37.8</ProductSize>
-                                  </Details>
-                              </ProductDetails>
-                              <PriceDetails>
-                                  <PriceAmountContainer>
-                                      <Add />
-                                      <PriceAmount>1</PriceAmount>
-                                      <Remove/>
-                                      
-                                  </PriceAmountContainer>
-                                <ProductPrice>$40</ProductPrice>
-                              </PriceDetails>
-                              
-                            </Products>
-                      </Info>
-                      <Summary>
-                          <SummaryTitle>Oder Summary </SummaryTitle>
-                            <SummaryItem>
-                                <SummaryItemText>Subtotal</SummaryItemText>
-                                <SummaryItemPrice>$ 80</SummaryItemPrice>
-                          </SummaryItem>
-                          <SummaryItem>
-                                <SummaryItemText>Estimated Shipping</SummaryItemText>
-                                <SummaryItemPrice>$5.90</SummaryItemPrice>
-                          </SummaryItem>
-                          <SummaryItem>
-                                <SummaryItemText>Shipping Discount</SummaryItemText>
-                                <SummaryItemPrice>-$5.90</SummaryItemPrice>
-                          </SummaryItem>
-                          <SummaryItem type = "total">
-                                <SummaryItemText >Total</SummaryItemText>
-                                <SummaryItemPrice>$80</SummaryItemPrice>
-                          </SummaryItem>
-                        <Button>CHECKOUT NOW</Button>
-
-                      </Summary>
-                  </Bottom>
-                  
-                  
-              </Wrapper>
-              <Newsletter />
-              <Footer/>
-          </Container>
-    </>
-  )
-}
 
 export default Cart

@@ -5,17 +5,36 @@ import Product from './Page/Product';
 import Register from './Page/Register';
 import SignIn from './Page/SignIn';
 import Cart from './Page/Cart';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+} from "react-router-dom";
+
 
 const App = () => {
   return (
-    <div>
-      <Home/> 
+    <>
+        <Router>
+    
+        <Routes>
+        <Route path="/" element={<Home />} /> 
+          <Route path="/ProductList" element={<ProductList />} /> 
+          <Route path="/Product" element={<Product />} /> 
+          <Route path="/Register" element={<Register />} /> 
+          <Route path="/SignIn" element={<SignIn />} /> 
+          <Route path="/Cart" element={<Cart />} />
+        </Routes>
+        </Router>
+        
+      
       {/* <ProductList/>  */}
       {/* <Product/> */}
      {/* <Register/>  */}
       {/* <SignIn/>  */}
       {/* <Cart/> */}
-    </div>
+      
+      </>
   )
 }
 

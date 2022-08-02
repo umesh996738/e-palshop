@@ -4,6 +4,60 @@ import ArrowLeftOutlinedIcon from '@mui/icons-material/ArrowLeftOutlined';
 import ArrowRightOutlinedIcon from '@mui/icons-material/ArrowRightOutlined';
 import {sliderItems } from '../data';
 
+const Slider = () => {
+  const [slideIndex, setSlideIndex] = useState(0);
+
+  const handlClick = (direction) => { 
+    if (direction === "left") {
+      setSlideIndex(slideIndex > 0 ? slideIndex-1:2);
+    }
+    else { 
+      setSlideIndex(slideIndex < 2 ? slideIndex+1:0);
+    }
+
+  }
+  return (
+    <>
+      <Container>
+         <Arrow direction = 'left' onClick={()=>handlClick("left")}>
+          
+          <ArrowLeftOutlinedIcon />
+
+        </Arrow>
+        <Wrapper slideIndex={slideIndex}>
+          {
+            sliderItems.map((item) => (
+
+            <Slide bg={item.bg} key={ item.id}>
+            <ImageContainer>
+              <Image src={item.img} alt='image' />
+              </ImageContainer>
+            <InfoContainer>
+                <Title>{ item.title}</Title>
+              <Description>
+                  <h3>{ item.description}</h3>
+                <ul>
+                <li>Care Instructions: Dry Clean Only </li>
+                <li>Fit Type: Regular</li>
+                <li>Fabric : Polyester</li>
+                <li>Sleeve Type : Half Sleeve</li>
+                <li>Wash Care : first wash is dry clean after that use machine wash or hand wash</li>
+                <li> Color : white</li>
+              </ul> </Description>
+              <Button> Shop Now</Button>
+            </InfoContainer>
+        </Slide>
+         ))}
+           </Wrapper>
+        <Arrow direction='right' onClick={() => handlClick("right")}>
+              <ArrowRightOutlinedIcon />
+          </Arrow> 
+    </Container>
+      
+  </>
+  )
+}
+
 const Container = styled.div`
       width: 100%;
       height: 100vh;
@@ -84,60 +138,5 @@ const Button = styled.button`
      cursor: pointer;
 
 `;
-
-
-const Slider = () => {
-  const [slideIndex, setSlideIndex] = useState(0);
-
-  const handlClick = (direction) => { 
-    if (direction === "left") {
-      setSlideIndex(slideIndex > 0 ? slideIndex-1:2);
-    }
-    else { 
-      setSlideIndex(slideIndex < 2 ? slideIndex+1:0);
-    }
-
-  }
-  return (
-    <>
-      <Container>
-         <Arrow direction = 'left' onClick={()=>handlClick("left")}>
-          
-          <ArrowLeftOutlinedIcon />
-
-        </Arrow>
-        <Wrapper slideIndex={slideIndex}>
-          {
-            sliderItems.map((item) => (
-
-            <Slide bg={item.bg} key={ item.id}>
-            <ImageContainer>
-              <Image src={item.img} alt='image' />
-              </ImageContainer>
-            <InfoContainer>
-                <Title>{ item.title}</Title>
-              <Description>
-                  <h3>{ item.description}</h3>
-                <ul>
-                <li>Care Instructions: Dry Clean Only </li>
-                <li>Fit Type: Regular</li>
-                <li>Fabric : Polyester</li>
-                <li>Sleeve Type : Half Sleeve</li>
-                <li>Wash Care : first wash is dry clean after that use machine wash or hand wash</li>
-                <li> Color : white</li>
-              </ul> </Description>
-              <Button> Shop Now</Button>
-            </InfoContainer>
-        </Slide>
-         ))}
-           </Wrapper>
-        <Arrow direction='right' onClick={() => handlClick("right")}>
-              <ArrowRightOutlinedIcon />
-          </Arrow> 
-    </Container>
-      
-  </>
-  )
-}
 
 export default Slider;

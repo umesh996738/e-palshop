@@ -1,5 +1,11 @@
 import styled from "styled-components";
 
+
+
+const Announcement = () => {
+  return <Container>Super Deal! Get Discount Every Product up to 5% </Container>;
+};
+
 const Container = styled.div`
   height: 30px;
   background-color: teal;
@@ -10,9 +16,5 @@ const Container = styled.div`
   font-size: 25px;
   font-weight: 500;
 `;
-
-const Announcement = () => {
-  return <Container>Super Deal! Get Discount Every Product up to 5% </Container>;
-};
 
 export default Announcement;

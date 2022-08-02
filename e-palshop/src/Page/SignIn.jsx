@@ -1,6 +1,24 @@
 import styled from 'styled-components';
 import { mobile } from "../responsive";
 
+const SignIn = () => {
+    return (
+        <>
+            <Container>
+                <Wrapper>
+                    <Title> Sign In</Title>
+                    <Form>
+                        <Input placeholder="Enter your email address" />
+                        <br />
+                        <Input placeholder=" Enter your password" />
+                    </Form>
+                    <Button>Login</Button>
+                    <Register>Create Account</Register>
+                </Wrapper>
+            </Container>
+        </>
+    )
+};
 const Container = styled.div`
       width: 100VW;
       height: 100vh;
@@ -19,10 +37,7 @@ const Wrapper = styled.div`
     flex-direction: column;
     margin:20px;
     ${mobile({ width: "75%" })};
-
-
 `;
-
 const Title = styled.h1`
       
       display: flex;
@@ -31,7 +46,6 @@ const Title = styled.h1`
       margin-top:20px;
       margin-bottom: 20px;
       color:blue;
-
 `;
 const Form = styled.form`
     display: flex;
@@ -71,24 +85,5 @@ const Register = styled.h4`
     margin-left:20px;
     cursor: pointer;
 `;
-
-const SignIn = () => {
-  return (
-    <>
-          <Container>
-              <Wrapper>
-                  <Title> Sign In</Title>
-                  <Form>
-                      <Input placeholder="Enter your email address" />
-                        <br/>
-                      <Input placeholder = " Enter your password" />
-                  </Form>
-                  <Button>Login</Button>
-                  <Register>Create Account</Register>
-              </Wrapper>
-        </Container>      
-    </>
-  )
-}
 
 export default SignIn

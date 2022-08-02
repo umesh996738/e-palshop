@@ -2,18 +2,6 @@ import React from 'react';
 import SearchIcon from '@mui/icons-material/Search';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import styled from 'styled-components';
-const Logo = styled.h1`
-    font-size:20px;
-    font-weight:bold ;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    margin:20px;
-    color:white;
-
-  
-`;
-
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 import './Header.css';
 
@@ -69,5 +57,17 @@ function Header() {
     </>
   )
 }
+
+const Logo = styled.h1`
+    font-size:20px;
+    font-weight:bold ;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin:20px;
+    color:white;
+
+  
+`;
 
 export default Header

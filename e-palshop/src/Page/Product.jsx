@@ -7,7 +7,65 @@ import { mobile } from "../responsive";
 import { Add, Remove } from "@mui/icons-material";
 
 
-
+const Product = () => {
+  return (
+      <>
+          <Container>
+              <Header />
+              <Announcement />
+              <Wrapper>
+                  <ImageContainer>
+                      <Image src = "https://images.unsplash.com/photo-1583846783214-7229a91b20ed?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1635&q=80" alt = "image"/>
+                  </ImageContainer>
+                  <InfoContainer>
+                      <Title>Lymio Women's Dress</Title>
+                      <Desc>
+                        <h3>Description:</h3>
+                        <ul>
+                            <li>Care Instructions: Dry Clean Only </li>
+                            <li>Fit Type: Regular</li>
+                            <li>Fabric : Polyester</li>
+                            <li>Sleeve Type : Half Sleeve</li>
+                            <li>Wash Care : first wash is dry clean after that use machine wash or hand wash</li>
+                            <li> Color : white</li>
+                        </ul> 
+                      </Desc>
+                      <Price>$199.99</Price>
+                     <FilterContainer>
+                    <Filter>
+                        <FilterTitle>Color</FilterTitle>
+                        <FilterColor color="black" />
+                        <FilterColor color="darkblue" />
+                        <FilterColor color="gray" />
+                    </Filter>
+                    <Filter>
+                        <FilterTitle>Size</FilterTitle>
+                    <FilterSize>
+                        <FilterSizeOption>XS</FilterSizeOption>
+                        <FilterSizeOption>S</FilterSizeOption>
+                        <FilterSizeOption>M</FilterSizeOption>
+                        <FilterSizeOption>L</FilterSizeOption>
+                        <FilterSizeOption>XL</FilterSizeOption>
+                    </FilterSize>
+                    </Filter>
+                     </FilterContainer>
+                    <AddContainer>
+                        <AmountContainer>
+                        <Remove />
+                        <Amount>1</Amount>
+                        <Add />
+                        </AmountContainer>
+                        <Button>ADD TO CART</Button>
+                        </AddContainer>
+        
+                </InfoContainer>
+              </Wrapper>
+            <Newsletter />
+            <Footer />
+        </Container>
+    </>
+  )
+}
 
 const Container = styled.div`
   width: 100vw;
@@ -117,65 +175,5 @@ const Button = styled.button`
   &:hover{
       background-color: #f8f4f4;
   }`;
-
-const Product = () => {
-  return (
-      <>
-          <Container>
-              <Header />
-              <Announcement />
-              <Wrapper>
-                  <ImageContainer>
-                      <Image src = "https://images.unsplash.com/photo-1583846783214-7229a91b20ed?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1635&q=80" alt = "image"/>
-                  </ImageContainer>
-                  <InfoContainer>
-                      <Title>Lymio Women's Dress</Title>
-                      <Desc>
-                        <h3>Description:</h3>
-                        <ul>
-                            <li>Care Instructions: Dry Clean Only </li>
-                            <li>Fit Type: Regular</li>
-                            <li>Fabric : Polyester</li>
-                            <li>Sleeve Type : Half Sleeve</li>
-                            <li>Wash Care : first wash is dry clean after that use machine wash or hand wash</li>
-                            <li> Color : white</li>
-                        </ul> 
-                      </Desc>
-                      <Price>$199.99</Price>
-                     <FilterContainer>
-                    <Filter>
-                        <FilterTitle>Color</FilterTitle>
-                        <FilterColor color="black" />
-                        <FilterColor color="darkblue" />
-                        <FilterColor color="gray" />
-                    </Filter>
-                    <Filter>
-                        <FilterTitle>Size</FilterTitle>
-                    <FilterSize>
-                        <FilterSizeOption>XS</FilterSizeOption>
-                        <FilterSizeOption>S</FilterSizeOption>
-                        <FilterSizeOption>M</FilterSizeOption>
-                        <FilterSizeOption>L</FilterSizeOption>
-                        <FilterSizeOption>XL</FilterSizeOption>
-                    </FilterSize>
-                    </Filter>
-                     </FilterContainer>
-                    <AddContainer>
-                        <AmountContainer>
-                        <Remove />
-                        <Amount>1</Amount>
-                        <Add />
-                        </AmountContainer>
-                        <Button>ADD TO CART</Button>
-                        </AddContainer>
-        
-                </InfoContainer>
-              </Wrapper>
-            <Newsletter />
-            <Footer />
-        </Container>
-    </>
-  )
-}
 
 export default Product
