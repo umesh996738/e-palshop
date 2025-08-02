@@ -24,8 +24,8 @@ const userSchema = new mongoose.Schema({
   },
   role: {
     type: String,
-    enum: ['user', 'admin'],
-    default: 'user'
+    enum: ['customer', 'distributor', 'admin'],
+    default: 'customer'
   },
   avatar: {
     type: String,
@@ -40,17 +40,47 @@ const userSchema = new mongoose.Schema({
       message: 'Please enter a valid phone number'
     }
   },
-  address: {
+  company: {
+    name: String,
+    taxId: String,
+    website: String,
+    type: {
+      type: String,
+      enum: ['individual', 'small_business', 'corporation', 'distributor'],
+      default: 'individual'
+    }
+  },
+  addresses: [{
+    type: {
+      type: String,
+      enum: ['billing', 'shipping', 'both'],
+      default: 'both'
+    },
+    isDefault: {
+      type: Boolean,
+      default: false
+    },
+    fullName: String,
     street: String,
     city: String,
     state: String,
     zipCode: String,
-    country: String
-  },
+    country: {
+      type: String,
+      default: 'United States'
+    },
+    phone: String
+  }],
   isActive: {
     type: Boolean,
     default: true
   },
+  isEmailVerified: {
+    type: Boolean,
+    default: false
+  },
+  emailVerificationToken: String,
+  emailVerificationExpire: Date,
   resetPasswordToken: String,
   resetPasswordExpire: Date
 }, {
