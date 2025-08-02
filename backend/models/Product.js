@@ -45,6 +45,27 @@ const productSchema = new mongoose.Schema({
     type: Number,
     min: [0, 'Compare price cannot be negative']
   },
+  bulkPricing: [{
+    minQuantity: {
+      type: Number,
+      required: true,
+      min: 1
+    },
+    maxQuantity: {
+      type: Number,
+      min: 1
+    },
+    price: {
+      type: Number,
+      required: true,
+      min: 0
+    },
+    discount: {
+      type: Number,
+      min: 0,
+      max: 100
+    }
+  }],
   category: {
     type: String,
     required: [true, 'Product category is required'],
