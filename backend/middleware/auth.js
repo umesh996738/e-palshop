@@ -72,6 +72,51 @@ const admin = (req, res, next) => {
   }
 };
 
+// Distributor or Admin middleware
+const distributorOrAdmin = (req, res, next) => {
+  if (req.user && (req.user.role === 'distributor' || req.user.role === 'admin')) {
+    next();
+  } else {
+    return res.status(403).json({
+      success: false,
+      message: 'Not authorized - Distributor or Admin access required'
+    });
+  }
+};
+
+// Role-based access middleware factory
+const authorize = (...roles) => {
+  return (req, res, next) => {
+    if (!req.user) {
+      return res.status(401).json({
+        success: false,
+        message: 'Authentication required'
+      });
+    }
+
+    if (!roles.includes(req.user.role)) {
+      return res.status(403).json({
+        success: false,
+        message: `Access denied. Required roles: ${roles.join(', ')}`
+      });
+    }
+
+    next();
+  };
+};
+
+// Email verification middleware
+const requireEmailVerification = (req, res, next) => {
+  if (req.user && !req.user.isEmailVerified) {
+    return res.status(403).json({
+      success: false,
+      message: 'Email verification required. Please verify your email to continue.',
+      code: 'EMAIL_NOT_VERIFIED'
+    });
+  }
+  next();
+};
+
 // Optional auth - doesn't require authentication but adds user if token is present
 const optionalAuth = async (req, res, next) => {
   try {
@@ -108,6 +153,9 @@ const generateToken = (id) => {
 module.exports = {
   protect,
   admin,
+  distributorOrAdmin,
+  authorize,
+  requireEmailVerification,
   optionalAuth,
   generateToken
 };
